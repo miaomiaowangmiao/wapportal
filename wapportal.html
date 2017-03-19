@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>大地影城</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../css/wapportal.css">
+    <script src="../script/baiduTemplate.js"></script>   
+     <link rel="stylesheet" href="../css/idangerous.swiper.css">
+ <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="wrap"> 
+   <div class="wapportal">
+   
+       <div class="topHeader" id="topHeader">
+            <a class="goback" tapmode="" onclick="goback()"><img src="../image/boult.png" class="backhome" /></a>
+            <span class="cityMovie">北京大地影院马驹桥米拉店</span>
+            <a class="share"><img src="../image/ima.png" class="shareImage"></a>
+       </div>
+       <p class="stub"></p>
+       <div class="cityMessage">
+       <div class="cityMovie" >北京大地影院马驹桥米拉店</div>
+       <p class="addressCity">通州区马驹桥镇新海东路1号楼豪润广场7层</p>
+       <ul class="ticketStyle">
+         <li class="ticketItme">退票</li>
+         <li class="ticketItme">改签</li>
+         <li class="ticketItme">取票机</li>
+         <li class="ticketItme">儿童票</li>
+       </ul>
+         
+       </div>
+      <!--<div class="blurContainer" id="film_blurContainer">-->
+          <div class="device">
+       <div class="swiper-container">
+       <div class="swiper-wrapper">
+      
+        <div class="swiper-slide">
+          <img src="../image/kun.jpeg" />
+        </div>
+        <div class="swiper-slide ">
+         <img src="../image/moive.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="../image/listen9.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="../image/kun.jpeg" />
+        </div>
+        <div class="swiper-slide">
+         <img src="../image/moive.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="../image/listen9.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="../image/listen9.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="../image/listen9.jpg" />
+        </div>
+      </div>
+    </div>
+    <div class="pagination"></div>
+  </div>
+  <div class="importent">
+     <script id="period" type="text/html">  
+       <!--</div>-->
+    <ul class="present">
+
+        <li  class="presentItem movieTr"><span class="trName"><%=b%></span ><span class="trScore">9.4分</span></li>
+        <li class="presentItem">美国</li>
+        <li class="presentItem">动作</li>
+        <li class="presentItem">时长115分</li>
+
+       </ul>
+       <div class="dataWarp">
+         <div class="data">
+           <ul class="dayList">
+           <%    for(var q in d.filmList[0].showList) {%>
+              <li class="day" style="border-bottom:3px solid red;color:red"><%=d.filmList[0].showList[q].showDate%></li>
+              
+             <%}%>
+           </ul>
+         </div>
+       </div>
+      <div class="preferential">
+         <span class="activety">活动</span>
+         <p class="tickeType">特价票没人限购两张，限时活动</p>
+         <a><img src="../image/X_03.png" class="nextPage"></a>
+        
+       </div>
+        <div class="period">
+         
+         <%  for(var q in d.filmList[0].showList) {
+                for(var n in d.filmList[0].showList[q].pList){
+            
+              var a= d.filmList[0].showList[q].pList;
+              var end = a[n].endTime.split(' ')[1].substr(0, 5);
+              var start = a[n].startTime.split(' ')[1].substr(0, 5);%> 
+                 <div class="periodItem">
+                 <div class="msg"><span class="startTime"><%=start%></span><p class="endTime"><span ><%=end%></span>散场</p></div>
+                  <div class="movieRoom"><p><%=a[n].language%><span><%=a[n].dimensional%></span></p><span><%=a[n].hallName%></span></div>
+                   <div class="indulgence">
+                   <%for(var i in a[n].sceneTypePriceVOList){
+                 if(a[n].sceneTypePriceVOList[i].priceType=="促销")%>
+                 <p class="induActive">特惠活动<span class="induPrice"><%=a[n].sceneTypePriceVOList[i].scenePrice%></span>元</p>
+                  <%}%>
+                   <p class="member">会员卡<span>18.8</span>元</p></div>
+                   
+                 <a href="" class="Trickt"><img src="../image/buy.png"  class="butTrickt" onclick="shareIma()"></a>
+                  </div>
+           <%}}%> 
+           
+        </div>
+         </script>
+       </div>
+    </div>
+     
+     
+    </div>
+</body>
+   <script src="../script/api.js"></script>
+     <script src="../script/zepto.js"></script>
+     <script src="../script/idangerous.swiper.min.js"></script>
+     <script src="../script/common.js"></script>
+     
+     
+
+<script type="text/javascript">
+   
+function goback () {
+        api.closeWin();
+}
+function swiperContaint(){
+      // Initialize Swiper 
+    var mySwiper = new Swiper('.swiper-container',{
+   
+    paginationClickable: true,
+    centeredSlides: true,
+    slidesPerView: 3.52,
+    watchActiveIndex: true
+  })
+
+  }  
+
+  function slideClick(){
+    $(".swiper-slide").on('click',function(){
+         
+	   $(".swiper-slide").addClass('swiper-slide-visible');
+	   $(".swiper-slide").removeClass('swiper-slide-active');
+       $(this).addClass('swiper-slide-active');
+       
+          $.each($('.swiper-slide'),function(index,ele){
+           if(this.className=="swiper-slide swiper-slide-visible swiper-slide-active"){
+
+            $('.swiper-wrapper').css({'padding-left': '3.66rem','padding-right':'3.66rem','width': '22.578rem','height':'4.335rem','transition-duration': '0.3s','transform': 'translate3d('+ 2.82*index*(-1)+'rem, 0px, 0px)'});
+             }
+        })
+
+
+
+  });
+
+  }
+  swiperContaint();
+  slideClick();
+
+
+      var  ajaxMovie=function(){
+// //var pageParam = api.pageParam;
+// //var goods_id = JSON.stringify(pageParam.goods_id);
+           var bt=baidu.template;
+//        // 获取商品相关信息       
+//       api.pageParam
+         $.ajax({
+         type: "get",
+         url: "http://cinema.dadicinema.com/film/getHitFilmAndFilmSession?cinemaCode=11070811",
+         data: " ",
+         success: function(msg){
+           var  b,present;
+                present=bt("present",msg);
+                b=bt("period",msg);
+               $(".importent").html(b);
+              
+          
+         }
+   });
+        
+}     
+  ajaxMovie();
+        
+    // apiready=function(){
+     
+//    swiperContaint();
+// fixStatusBar('topHeader');
+    // }
+
+</script>

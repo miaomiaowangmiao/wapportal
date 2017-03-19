@@ -1,0 +1,108 @@
+html,body{width:10rem;height:100%;font-size:0.27rem;}
+#wrap{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    box-sizing: border-box;;
+    -webkit-box-orient: vertical;
+    -webkit-flex-flow: column;
+           flex-flow: column;
+}
+#header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  vertical-align: middle;
+    width: 100%;
+    height: 1.8rem;
+    padding:0 0.4rem;
+}
+#chooseCityBtn{
+  height:0.38rem;
+}
+#chooseCityBtn .chooseCityImg{
+  display: inline-block;
+  border: none;
+  outline: none;
+  width: 0.28rem;
+  height:0.37rem;
+  padding-right: 0.13rem;
+}
+#chooseCityBtn .chooseCitySpan{
+  color: #545454;
+  font-size:0.32rem;
+  vertical-align: middle;
+}
+/* main页面样式  */
+#headerBanner{
+  background:#ececec;
+  border-radius:0.133rem;/*兼容待解决*/
+  text-align: center;
+   width:3.6rem;
+    /*height: 0.88rem;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.67rem;
+
+}
+#headerBanner .banner{
+  width: 1.72rem;
+  height: 0.82rem;
+  font-size: 0.4rem;
+  color: #72777a;
+  line-height: 0.82rem;
+}
+#headerBanner .banner.active{
+ background: url(../image/hot.png)  no-repeat;
+ background-size: 100% 100%;
+   color: #fff;
+}
+
+    /*选择登录样式按钮*/
+#registerBtn{
+  background: url("../image/enter.png") ;
+  background-size: 100% 100%;
+    width: 1.08rem;
+    height: 0.66rem;
+    margin-left:0 1.33rem;
+}
+
+
+#main{
+    -webkit-box-flex: 1; 
+    -webkit-flex: 1;
+    flex: 1;
+}
+#footer{
+  display: flex;
+  justify-content: space-around;
+  align-self: center;
+    width: 100%;
+    height: 1.333rem;
+    background: #fffcf9;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+
+}
+#footer>a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 1.333rem;
+}
+#footer .icon_item{
+  background:url(../image/movie_02.png) no-repeat;
+  background-size:cover;
+  width: 0.68rem;
+  height: 1.04rem;
+  display: block;
+}
+#footer .active{
+  background:url(../image/movie_03.gif) no-repeat;
+  background-size:cover;
+}
+

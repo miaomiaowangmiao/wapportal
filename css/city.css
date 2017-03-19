@@ -1,0 +1,113 @@
+html,body{width:10rem;height:100%;font-size:0.27rem; overflow-x:hidden;font-family:"微软雅黑";}
+#warp{
+  overflow: hidden;
+  width:10rem;
+
+}
+.cityHeader{
+	height: 1.253rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding:0 0.4rem;
+	border-bottom: 0.01rem solid #b2b2b2;
+}
+.changeCity,.close{
+   font-size:0.3rem;
+}
+.center{
+	 font-size: 0.453rem;
+}
+.searchView{
+  height: 1.347rem;
+  display: flex;
+  align-items: center;
+}
+.search {
+	display: inline-block;
+    height: 1.347rem;
+    line-height: 1.347rem;
+    width: 100%;
+    font-size: 0.43rem;
+    border:none;
+    overflow: hidden;
+    color: #333;
+    text-indent: 0.05rem;
+}
+.searchImg{
+	width: 0.5rem;
+	height: 0.5rem;
+	margin-left: 0.4rem;
+
+}
+.cityMeua{
+	width: 95%;
+}
+.greyTitle{
+  background: #e5e5e5;
+  font-size: 0.43rem;
+  height: 0.853rem;
+  line-height: 0.853rem;
+  padding-left: 0.4rem;
+}
+.local{
+    display: flex;
+    height: 1.2rem;
+    font-size: 0.373rem;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 0.4rem;
+}
+.localList li{
+	border-bottom: 0.01rem solid #e5e5e5;
+	padding-left: 0.4rem;
+	font-family:"微软雅黑";
+}
+.refurbish{
+	margin-right: 0.627rem;
+    border: 0.013rem solid #a5e1cd;
+    padding: 0.05rem 0.427rem;
+    color: #a5e1cd;
+    font-size: 0.37rem;
+    border-radius: 0.067rem;
+}
+.addressItem{
+    display: flex;
+    height: 1.05rem;
+    font-size: 0.373rem;
+    justify-content: space-between;
+    align-items: center;
+    padding:0.4rem;
+}
+.site{
+   color: #c7c7cb;
+   font-size: 0.25rem;
+   margin-top:0.06rem;
+   white-space:nowrap; text-overflow:ellipsis; overflow: hidden;
+}
+.refurbish{
+	margin-right: 0.627rem;
+    border: 0.013rem solid #a5e1cd;
+    padding: 0.05rem 0.427rem;
+    color: #a5e1cd;
+    font-size: 0.37rem;
+    border-radius: 0.067rem;
+}
+.sitePrent{font-size: 0.373rem;}
+.addressItem{
+    height: 1.347rem;
+    border-bottom: 0.013rem solid #e5e5e5;
+    font-size: 0.373rem;
+    font-family:"微软雅黑";
+}
+.sitePrent{
+	width: 8rem;
+}
+.go{
+	width: 0.35rem;
+	height: 0.4rem;
+}
+.hierarchy{
+ display: none;
+ 
+}
